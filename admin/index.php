@@ -6,3 +6,4 @@ if(isset($_SESSION["user"]) == false){
 }
 include "connect_sql.php"
 ?>
+coucou les boys
