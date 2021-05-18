@@ -18,8 +18,11 @@ include "../connect_sql.php"
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
+    <?php 
+    include "header.php";
+    include "nav.php"; 
+    ?>
     <body>
         <p>Bienvenue Member</p>
-        <a href="../logout.php">LOGOUT</a>
     </body>
 </html>

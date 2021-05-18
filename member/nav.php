@@ -1,3 +1,9 @@
 <nav>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, consequatur vero. Facilis alias necessitatibus tenetur et vero id voluptatem non sint dolores soluta doloribus nulla, nostrum praesentium magnam fugit quisquam?</p>
+    <div class="navbar">
+        <input class="navButton" type="text" placeholder="Chercher"></input>
+        <a class="navButton" href="profil.php">Profil</a>
+        <a class="navButton" href="enCours.php">En cours</a>
+        <a class="navButton" href="termine.php">Terminés</a>
+        <a class="navButton" href="../logout.php">Logout</a>
+    </div>
 </nav>
