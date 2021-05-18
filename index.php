@@ -1,7 +1,10 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
-    header("Location: http://ludo.serviel.fr/main.php");
+if(isset($_SESSION["id"])){
+    if($_SESSION["admin"] == 1)
+        header("Location: http://ludo.serviel.fr/admin/");
+    else
+        header("Location: http://ludo.serviel.fr/member/");
     exit();
 }
 ?>
@@ -20,7 +23,7 @@ if(isset($_SESSION["user"])){
                 <h1>Connexion</h1>
                 
                 <label><b>ID Utilisateur</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="id" required>
+                <input type="number" placeholder="Entrer le nom d'utilisateur" name="id" required>
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>
@@ -34,5 +37,19 @@ if(isset($_SESSION["user"])){
                 }?>
             </form>
         </div>
+        <?php
+            include "connect_sql.php";
+            $query = "SELECT * FROM Member"; //You don't need a ; like you do in SQL
+            $result = $conn->query($query);
+            //var_dump($result);
+            echo "<table>"; // start a table tag in the HTML
+
+            while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+            //var_dump($row);
+            echo "<tr><td>" . $row['ID_Member'] . "</td><td>" . $row['FirstName'] . "</td></tr>";  //$row['index'] the index here is a field name
+            }
+
+            echo "</table>"; //Close the table in HTML
+        ?>
     </body>
 </html>
