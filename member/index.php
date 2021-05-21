@@ -20,9 +20,20 @@ include "../connect_sql.php"
     </head>
     <?php 
     include "header.php";
-    include "nav.php"; 
     ?>
     <body>
-        <p>Bienvenue Member</p>
+        <?php 
+        include "nav.php";
+        ?>
+        <div class="main">
+            <?php for($i=0; $i<6; $i++){?>
+            <div class="elt">
+                <img class="game_img" src="../Images/jungle_speed.jpg"/>
+                <h2>Jungle Speed</h2>
+                <h3>2-5 Joueurs</h3>
+                <p>C'est un super jeu entre amis</p>
+            </div>
+            <?php } ?>
+        </div>
     </body>
 </html>
