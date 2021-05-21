@@ -78,3 +78,8 @@ p{
 a:link {
   color:inherit;
 }
+
+.main a img{
+  margin-top: 10px;
+  height: 50px;
+}

@@ -27,7 +27,7 @@ include "../connect_sql.php"
         ?>
         <div class="main">
             <a href="index.php"><img src="../Images/return.png" /></a>
-            <h1>Emprunts finis</h1>
+            <h1>Emprunts en cours</h1>
             <div class="elt">
                 <img class="game_img" src="../Images/jungle_speed.jpg"/>
                 <h2>Jungle Speed</h2>
