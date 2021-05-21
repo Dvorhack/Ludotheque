@@ -1,17 +1,8 @@
 <?php
-session_start();
-if(isset($_SESSION["id"]) == false){
-    header("Location: http://ludo.serviel.fr/");
-    exit();
-}elseif($_SESSION["admin"] == 0){
-    header("Location: http://ludo.serviel.fr/member/");
-    exit();
-}
+include "checkUser.php";
 
-
-include "../connect_sql.php"
+include "../connect_sql.php";
 ?>
-
 <!doctype html>
     <html lang="fr">
     <head>
@@ -20,8 +11,15 @@ include "../connect_sql.php"
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
+    <?php 
+    //include "header.php";
+    ?>
     <body>
-        <p>Bienvenue Admin</p>
-        <a href="../logout.php">LOGOUT</a>
+        <?php 
+        include "nav.php";
+        ?>
+        <div class="main">
+            <h1>Admin Page</h1>
+        </div>
     </body>
 </html>
