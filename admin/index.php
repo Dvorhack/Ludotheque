@@ -1,5 +1,5 @@
 <?php
-include "checkUser.php";
+include "Utils/checkUser.php";
 
 include "../connect_sql.php";
 ?>

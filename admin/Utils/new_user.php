@@ -8,7 +8,7 @@ if($_SESSION['admin'] == 0){
     header("Location: http://ludo.serviel.fr/member/");
     exit();
 }
-include "../connect_sql.php";
+include "../../connect_sql.php";
 $FN = $_POST['fname'];
 $LN = $_POST['lname'];
 $phone = $_POST['phone'];

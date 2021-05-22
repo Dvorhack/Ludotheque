@@ -1,5 +1,5 @@
 <?php
-include "checkUser.php";
+include "Utils/checkUser.php";
 
 include "../connect_sql.php";
 ?>
@@ -18,7 +18,7 @@ include "../connect_sql.php";
         ?>
         <div class="main">
             <a href="index.php"><img src="../Images/return.png" /></a>
-            <form action="chgmdp.php" method="POST">
+            <form action="Utils/chgmdp.php" method="POST">
                 <label><b>Votre ID: <?php echo $_SESSION["id"] ?></b></label>
                 </br>
                 

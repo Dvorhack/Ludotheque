@@ -1,5 +1,5 @@
 <?php
-include "checkUser.php";
+include "Utils/checkUser.php";
 
 include "../connect_sql.php";
 ?>
@@ -61,7 +61,7 @@ include "../connect_sql.php";
             <div class="popup-content">
                 <span class="close">&times;</span>
                 <h2>Ajout Jeu</h2>
-                <form action="new_game.php" method='POST'>
+                <form action="Utils/new_game.php" method='POST'>
                     <label><b>Nom</b></label>
                     <input type="text" placeholder="Nom du jeux" name="name" required></br>
                     <label><b>Age minimum</b></label>

@@ -1,5 +1,5 @@
 <?php
-include "checkUser.php";
+include "Utils/checkUser.php";
 
 include "../connect_sql.php";
 ?>
@@ -59,7 +59,7 @@ include "../connect_sql.php";
             <div class="popup-content">
                 <span class="close">&times;</span>
                 <h2>Création utilisateur</h2>
-                <form action="new_user.php" method='POST'>
+                <form action="Utils/new_user.php" method='POST'>
                     <label><b>Prénom</b></label>
                     <input type="text" placeholder="Prénom" name="fname" required></br>
                     <label><b>Nom</b></label>
