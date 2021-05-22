@@ -37,7 +37,7 @@ if(isset($_SESSION["id"])){
                 }?>
             </form>
         </div>
-        <?php
+        <?php/*
             include "connect_sql.php";
             $query = "SELECT * FROM Member"; //You don't need a ; like you do in SQL
             $result = $conn->query($query);
@@ -49,7 +49,7 @@ if(isset($_SESSION["id"])){
             echo "<tr><td>" . $row['ID_Member'] . "</td><td>" . $row['FirstName'] . "</td></tr>";  //$row['index'] the index here is a field name
             }
 
-            echo "</table>"; //Close the table in HTML
+            echo "</table>"; //Close the table in HTML$/
         ?>
     </body>
 </html>

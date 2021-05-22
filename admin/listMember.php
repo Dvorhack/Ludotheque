@@ -30,17 +30,29 @@ include "../connect_sql.php";
             echo "<tr><td>" . $row['ID_Member'] . 
                 "</td><td>" . $row['FirstName'] . 
                 "</td><td>" . $row['LastName'] . 
-                "</td><td>"  . $row['Phone'] . "</td><td><button type='button' onclick='unimplemented()'>Supprimer</button></td></tr>"; 
+                "</td><td>"  . $row['Phone'] . "</td><td><button type='button' onclick='supprMember(".$row['ID_Member'].")'>Supprimer</button></td></tr>"; 
             }
 
             echo "</table>"; 
+            ?>
+            
+            <thead><tr>
+                <th>ID</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Numéro</th>
+            </tr></thead>
+            <?php
             
             ?>
-            <button type='button' id='ajoutUser' >Ajouter</button>
+            <button type='button' id='addUser' >Ajouter</button>
             <?php 
             if(isset($_GET['ajout']))
                 if($_GET['ajout'] == 1)
-                    echo "<h3>Utilisateur ajouté !</h3>"
+                    echo "<h3>Utilisateur ajouté !</h3>";
+            if(isset($_GET['suppr']))
+                if($_GET['suppr'] == 1)
+                    echo "<h3>Utilisateur supprimé !</h3>";
             ?>
         </div>
         <div id="popupBox" class='popup'>
@@ -66,7 +78,7 @@ include "../connect_sql.php";
             var popup = document.getElementById("popupBox");
 
             // Get the button that opens the modal
-            var btn = document.getElementById("ajoutUser");
+            var btn = document.getElementById("addUser");
 
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
