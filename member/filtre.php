@@ -1,8 +1,9 @@
-<div class="header">
-    <input class="navButton" type="text" placeholder="Chercher" onkeydown="search(this)"></input>
-    <button class="hButton" type="button" id="ageBtn" >Age</button>
-    <button class="hButton" type="button" id="nbBtn" >Nb Joueurs</button>
-    <button class="hButton" type="button" id="typeBtn" >Type</button>
+<div class="filtre-Box">
+    <h4>Filtrer les résultats</h4>
+    <input class="filtre" type="text" placeholder="Chercher" onkeydown="search(this)"></input>
+    <button class="filtre" type="button" id="ageBtn" >Age</button>
+    <button class="filtre" type="button" id="nbBtn" >Nb Joueurs</button>
+    <button class="filtre" type="button" id="typeBtn" >Type</button>
 </div>
 <div id="ageBox" class='popup'>
     <div class="popup-content">

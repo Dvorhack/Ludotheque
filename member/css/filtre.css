@@ -1,0 +1,13 @@
+.filtre-Box{
+    width:160px;
+    background-color: lightseagreen;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+}
+
+.filtre{
+    font-size: 20px;
+    width:90%;
+    padding:10px;
+}

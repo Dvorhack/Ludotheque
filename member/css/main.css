@@ -1,0 +1,27 @@
+.main{
+    background-color: lightslategray;
+    border-style: solid;
+    height: 100%;
+}
+
+.elt{
+    background-color: white;
+    height: 200px;
+}
+
+.elt img{
+    width:100px;
+}
+
+.elt .abstract{
+    visibility: hidden;
+}
+
+.elt button{
+    margin:5px;
+}
+
+.elt .info{
+    float:inline-start;
+    visibility: hidden;
+}
