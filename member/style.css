@@ -43,7 +43,7 @@
 header{
     border-style: solid;
     text-align: right;
-    margin-left: 11%;
+    /*margin-left: 11%;*/
     display: block;
 
     background-color: lightslategray;
