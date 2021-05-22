@@ -1,17 +1,65 @@
 #wrapper{
-    background-color: aquamarine;
-    border-style: solid;
-    width: 50%;
-    display: block;
     margin: auto;
+    margin-top: 100px;
+    background-color: white;
+    /*border-style: solid;*/
+    border-radius: 5px;
+    width: 40%;
+    display: block;
+    padding: 20px;
     text-align: center;
 }
 
-a{
-    Color: green;
-    font-weight: bold;
+input{
+    width: 60%;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+
+    font-size: larger;
 }
 
-a:hover{
-    width: 120%;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+#submit{
+    background-color: #c5d144;
+    color: white;
+}
+
+h1{
+    
+    font-weight: 300;
+}
+
+body{
+    background-color: #c5d144;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    /*display: block;*/
+    margin: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-size: large;
+    color: lightgray;
+    border-style: none;
+    background-color: white;
+}
+
+
+button:hover{
+    color:rgb(189, 188, 188);
 }

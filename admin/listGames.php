@@ -9,6 +9,7 @@ include "../connect_sql.php";
         <meta charset="utf-8">
         <title>Admin Page</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/nav.css">
         <script src="script.js"></script>
     </head>
 
@@ -71,7 +72,7 @@ include "../connect_sql.php";
                     <label><b>Desciption</b></label>
                     <input type="text" placeholder="Description" name="abstract" required></br>
 
-                    <input type="submit" id='submit' value='LOGIN' >
+                    <input type="submit" id='submit' value='Ajouter' >
                 </form>
             </div>
         </div>

@@ -1,3 +1,4 @@
+
 <div class="sidenav">
     <a href="index.php"><img src="../Images/home.png" style="height: 30px;margin-left: 50px; margin-bottom:20px;"/></a>
     <!-- <input class="navButton" type="text" placeholder="Chercher" onkeydown="search(this)"></input> -->

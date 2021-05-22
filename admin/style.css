@@ -133,3 +133,26 @@ table {
   border-color:red;
   /*width:50%;*/
   }
+
+a, button, input{
+  display: block;
+  width: 80%;
+  
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+
+  font-size: larger;
+  text-decoration: none;
+
+  color: gray;
+}
+
+a:hover, button:hover{
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}

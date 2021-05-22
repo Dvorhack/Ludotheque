@@ -16,6 +16,7 @@ include "../connect_sql.php"
         <meta charset="utf-8">
         <title>Member Page</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/nav.css">
         <script src="script.js"></script>
     </head>
     <?php 
@@ -35,5 +36,6 @@ include "../connect_sql.php"
                 <p>C'est un super jeu entre amis</p>
             </div>
         </div>
+        <script src="js/header.js"></script>
     </body>
 </html>

@@ -9,6 +9,7 @@ include "../connect_sql.php";
         <meta charset="utf-8">
         <title>Admin Page</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/nav.css">
         <script src="script.js"></script>
     </head>
 
