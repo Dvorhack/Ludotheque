@@ -7,7 +7,7 @@ function societe(){
 }
 
 function video(){
-    document.location.href="video.php";
+    document.location.href="jeuVideo.php";
 }
 
 function profil(){

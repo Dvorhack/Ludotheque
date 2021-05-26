@@ -1,12 +1,12 @@
 // Get the modal
 var ageBox = document.getElementById("ageBox");
-var nbBox = document.getElementById("nbBox");
-var typeBox = document.getElementById("typeBox");
+var nbBox = document.getElementById("nbMinBox");
+var typeBox = document.getElementById("nbMaxBox");
 
 // Get the button that opens the modal
 var ageBtn = document.getElementById("ageBtn");
-var nbBtn = document.getElementById("nbBtn");
-var typeBtn = document.getElementById("typeBtn");
+var nbBtn = document.getElementById("nbMinBtn");
+var typeBtn = document.getElementById("nbMaxBtn");
 
 // Get the <span> element that closes the modal
 var span1 = document.getElementsByClassName("close")[0];
@@ -47,4 +47,12 @@ if (event.target == typeBox) {
     typeBox.style.display = "none";
 }
 }
-
+function removeFilter(id){
+    var url = window.location.href;    
+    if (url.indexOf('?') > -1){
+        url += '&remove=' + id
+    }else{
+        url += '?remove=' + id
+    }
+    window.location.href = url;
+}
