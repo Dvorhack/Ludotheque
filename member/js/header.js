@@ -13,3 +13,11 @@ function video(){
 function profil(){
     document.location.href="./profil.php";
 }
+
+function constr(){
+    document.location.href="Construction.php";
+}
+
+function eveil(){
+    document.location.href="eveil.php";
+}

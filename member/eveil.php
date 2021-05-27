@@ -32,7 +32,7 @@ include "../connect_sql.php"
         ?>
         <div class="main">
             <?php 
-            $query = "SELECT * FROM Game WHERE Type='Societe'"; 
+            $query = "SELECT * FROM Game WHERE Type='Eveil'"; 
             if(isset($_SESSION['Age'])){
                 $Age = $_SESSION['Age'];
                 $query .= " AND Age=$Age";
@@ -50,7 +50,7 @@ include "../connect_sql.php"
             //echo $query;
             $i=0;
             while($row = mysqli_fetch_array($result)){?>
-            <div class="elt" onmouseover="elt_over(<?php echo $i ?>)" onmouseout="elt_out(<?php echo $i ?>)" onclick="showInfo(this)">
+            <div class="elt" onmouseover="elt_over(<?php echo $i ?>)" onmouseout="elt_out(<?php echo $i ?>)">
                 <?php 
                 $name = $row['Name'];
                 if(file_exists("../Images/$name.png"))
@@ -59,21 +59,13 @@ include "../connect_sql.php"
                 echo "<img class='game_img' src='../Images/$name.jpg'/>";
                 else
                     echo "<img class='game_img' src='../Images/default.png'/>"; ?>
-                
-                <h2 class="text"><?php echo $row['Name'];?></h2>
                 <h3 class="info">Cliquer pour + d'info</h3>
-                <h3 class="abstract">Age minimum: <?php echo $row['Age'];?> ans</h3>
+                <h2><?php echo $row['Name'];?></h2>
+                <h3>Age minimum: <?php echo $row['Age'];?> ans</h3>
                 <p class="abstract"><?php echo $row['Abstract'];?></p>
-                
                 <button type='button' onclick='unimplemented()'>Réserver</button>
             </div>
             <?php $i++; } ?>
-        </div>
-        <div id="infoBox" class='popup'>
-            <div class="popup-content">
-                <span class="hideInfo">&times;</span>
-                
-            </div>
         </div>
         <script src="js/header.js"></script>
         <script src="js/filtre.js"></script>

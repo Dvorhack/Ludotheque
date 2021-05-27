@@ -32,8 +32,22 @@ include "../connect_sql.php"
         ?>
         <div class="main">
             <?php 
-            $query = "SELECT * FROM Game WHERE Type='Video'"; 
+            $query = "SELECT * FROM Game WHERE Type='JeuVideo'"; 
+            if(isset($_SESSION['Age'])){
+                $Age = $_SESSION['Age'];
+                $query .= " AND Age=$Age";
+            }
+            if(isset($_SESSION['NbMin'])){
+                $NbMin = $_SESSION['NbMin'];
+                $query .= " AND J_Min<=$NbMin";
+            }
+            if(isset($_SESSION['NbMax'])){
+                $NbMax = $_SESSION['NbMax'];
+                $query .= " AND J_Max>=$NbMax";
+            }
+            
             $result = $conn->query($query);
+            //echo $query;
             $i=0;
             while($row = mysqli_fetch_array($result)){?>
             <div class="elt" onmouseover="elt_over(<?php echo $i ?>)" onmouseout="elt_out(<?php echo $i ?>)">

@@ -7,9 +7,12 @@
 }
 
 .filtre{
-    font-size: 20px;
+    font-size: 15px;
     width:90%;
     padding:10px;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .filtreEle{
