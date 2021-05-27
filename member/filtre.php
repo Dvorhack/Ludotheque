@@ -1,9 +1,12 @@
 <div class="filtre-Box">
-    <h4>Filtrer les résultats</h4>
-    <input class="filtre" type="text" placeholder="Chercher" onkeydown="search(this)"></input>
-    <button class="filtre" type="button" id="ageBtn" >Age</button>
-    <button class="filtre" type="button" id="nbMinBtn" >Nb Joueurs min</button>
-    <button class="filtre" type="button" id="nbMaxBtn" >Nb Joueurs max</button>
+    <div class="filtre-container">
+        <h4>Filtrer les résultats</h4>
+        <input class="filtre" type="text" placeholder="Chercher" onkeydown="search(this)"></input>
+        <button class="filtre" type="button" id="ageBtn" >Age</button>
+        <button class="filtre" type="button" id="nbMinBtn" >Nb Joueurs min</button>
+        <button class="filtre" type="button" id="nbMaxBtn" >Nb Joueurs max</button>
+    </div>
+    <div class="filtre-container">
 
     <?php
     if(isset($_GET['Age']))
@@ -34,6 +37,7 @@
         echo "<button class='filtreEle' type='button' id='NbMax' onclick='removeFilter(this.id)'>NbMax: " . $_SESSION['NbMax'] . "</button>";
     }
     ?>
+    </div>
 </div>
 <div id="ageBox" class='popup'>
     <div class="popup-content">

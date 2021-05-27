@@ -1,35 +1,57 @@
 .main{
     background-color: lightslategray;
-    
     height: 100%;
+    padding: 1.5rem;
 
 }
-
-.elt{
+.cards{
     background-color: white;
     width: 200px;
-    height: 250px;
+    height: auto;
     border-radius: 5px;
     border-width: 2px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     top:0px;
 }
-
-.elt img{
-    width:200px;
-  
+.cards:hover {
+    background-color: #dfdfdf;
+}
+/*
+pour centrer des trucs
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+*/
+.cards img{
+    width: 100px;
+    display: flex;
+    place-self: center;
 }
 
-.elt .abstract{
-    visibility: hidden;
-}
-
-.elt .info{
+.cards .info{
+    color: lightseagreen;
     float:left;
     visibility: hidden;
 }
 
-.elt button{
+.cards button{
     visibility: hidden;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards .game_img{
+    width: 100px;
 }

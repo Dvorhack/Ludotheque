@@ -1,17 +1,29 @@
 /* Partie header */
-
+html{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+body{
+    margin: none;
+    height: 72vh;
+}
 header{
     background-color: white;
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
 .header-content{
-    border-style: solid;
-    /*float:right;*/
-    margin-right: 20px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}
+
+.header-item{
+    display: flex;
 }
 
 #logo{
@@ -21,6 +33,9 @@ header{
     
 }
 
+.bold{
+    font-weight: bold;
+}
 
 /* Partie nav */
 nav{
