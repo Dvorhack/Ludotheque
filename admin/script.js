@@ -17,3 +17,4 @@ function supprMember(id){
         alert("Vous n'avez pas le droit de supprimer le compte administrateur");
     document.location.href = "Utils/supprMember.php?idMem=" + id;
 }
+

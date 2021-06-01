@@ -73,7 +73,7 @@ include "../connect_sql.php"
         </div>
         <div id="infoBox" class='popup'>
             <div class="popup-content">
-                <span class="hideInfo">&times;</span>
+                
                 
             </div>
         </div>

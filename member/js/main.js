@@ -17,18 +17,27 @@ var span = document.getElementsByClassName("hideInfo")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-age.style.display = "none";
+infoBox.style.display = "none";
 }
 
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 if (event.target == infoBox) {
-    ageBox.style.display = "none";
+    infoBox.style.display = "none";
 }
 
 }
 
 function showInfo(div){
     infoBox.style.display = "block";
+    var name = div.getElementsByClassName("text")[0].innerHTML;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        infoBox.getElementsByClassName('popup-content')[0].innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "api/getContent.php?name="+name, true);
+    xhttp.send();
 }
