@@ -1,0 +1,60 @@
+/* Partie header */
+html{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+body{
+    margin: none;
+    height: 72vh;
+}
+header{
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}
+
+.header-item{
+    display: flex;
+}
+
+#logo{
+    width:50%;
+    /*float:inherit;*/
+    margin-left: 25%;
+    height: 100%
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* Partie nav */
+nav{
+    background-color: lightseagreen;
+    padding:5px;
+    
+}
+
+.param{
+    float:right;
+}
+
+nav button{
+    border-radius: 5px;
+    background-color: lightgray;
+    height: 30px;;
+    font-size: 15px;
+}
+
+h3{
+    float: right;
+}

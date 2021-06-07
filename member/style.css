@@ -40,14 +40,7 @@
     background-color: lightgray;
 }
 
-header{
-    border-style: solid;
-    text-align: right;
-    margin-left: 11%;
-    display: block;
 
-    background-color: lightslategray;
-}
 
 .hButton{
     width: 100px;
@@ -66,13 +59,7 @@ p{
   border-style: solid;
   width: 300px;
   height: 300px;
-  float:left;
-}
-
-.game_img{
-  width: 100px;
-  float: left;
-  margin-right: 10px;
+  display:inline-block
 }
 
 a:link {

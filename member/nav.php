@@ -1,8 +1,10 @@
-<div class="sidenav">
-    <a href="index.php"><img src="../Images/home.png" style="height: 30px;margin-left: 50px; margin-bottom:20px;"/></a>
-    <input class="navButton" type="text" placeholder="Chercher" onkeydown="search(this)"></input>
-    <a class="navButton" href="profil.php">Profil</a>
-    <a class="navButton" href="enCours.php">En cours</a>
-    <a class="navButton" href="termine.php">Terminés</a>
-    <a class="navButton" href="../logout.php">Logout</a>
-</div>
+<nav>
+    <button type='button' class="navBtn"onclick="societe()">Jeux de societe</button>
+    <button type='button'class="navBtn"onclick="video()">Jeux video</button>
+    <button type='button'class="navBtn"onclick="constr()">Jeux de construction</button>
+    <button type='button'class="navBtn"onclick="eveil()">Jeux d'eveil</button>
+    <button type='button'class="navBtn"onclick="emprunts()">Emprunts</button>
+    
+    <button type='button'class="param" onclick="logout()">Logout</button>
+    <button type='button'class="param" onclick="profil()">Profil</button>
+</nav>

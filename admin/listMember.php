@@ -26,15 +26,6 @@ include "../connect_sql.php";
             //var_dump($result);
             echo "<table>"; 
 
-            while($row = mysqli_fetch_array($result)){   
-            //var_dump($row);
-            echo "<tr><td>" . $row['ID_Member'] . 
-                "</td><td>" . $row['FirstName'] . 
-                "</td><td>" . $row['LastName'] . 
-                "</td><td>"  . $row['Phone'] . "</td><td><button type='button' onclick='supprMember(".$row['ID_Member'].")'>Supprimer</button></td></tr>"; 
-            }
-
-            echo "</table>"; 
             ?>
             
             <thead><tr>
@@ -44,6 +35,16 @@ include "../connect_sql.php";
                 <th>Numéro</th>
             </tr></thead>
             <?php
+
+            while($row = mysqli_fetch_array($result)){   
+            //var_dump($row);
+            echo "<tr><td>" . $row['ID_Member'] . 
+                "</td><td>" . $row['FirstName'] . 
+                "</td><td>" . $row['LastName'] . 
+                "</td><td>"  . $row['Phone'] . "</td><td><button type='button' onclick='supprMember(".$row['ID_Member'].")'>Supprimer</button></td></tr>"; 
+            }
+
+            echo "</table>"; 
             
             ?>
             <button type='button' id='addUser' >Ajouter</button>

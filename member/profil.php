@@ -17,10 +17,12 @@ include "../connect_sql.php"
         <title>Member Page</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/header.css">
     </head>
 
     <body>
         <?php 
+        include "header.php";
         include "nav.php";
         ?>
         <div class="main">
