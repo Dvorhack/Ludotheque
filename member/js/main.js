@@ -26,7 +26,6 @@ window.onclick = function(event) {
 if (event.target == infoBox) {
     infoBox.style.display = "none";
 }
-
 }
 
 function showInfo(div){
@@ -35,9 +34,29 @@ function showInfo(div){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-        infoBox.getElementsByClassName('popup-content')[0].innerHTML = this.responseText;
+        infoBox.getElementsByClassName('game-content')[0].innerHTML = this.responseText;
         }
     };
     xhttp.open("GET", "api/getContent.php?name="+name, true);
+    xhttp.send();
+}
+
+function reserver(){
+    let name = document.getElementsByClassName("game-content")[0].getElementsByClassName('text')[0].innerHTML;
+    var xhttp = new XMLHttpRequest();
+    //document.location.href = "api/reserve.php?name="+name;
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            //alert(this.responseText);
+            if(this.responseText == -1)
+                alert('Plus en stock');
+            if(this.responseText == 0){
+                alert('Jeu ajouté');
+                document.location.reload();
+            }
+
+        }
+    };
+    xhttp.open("GET", "api/reserve.php?name="+name, true);
     xhttp.send();
 }

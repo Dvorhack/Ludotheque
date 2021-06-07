@@ -5,7 +5,6 @@
     <a class="navButton" href="profil.php">Profil</a>
     <a class="navButton" href="listMember.php">Liste Membres</a>
     <a class="navButton" href="listGames.php">Liste Jeux</a>
-    <a class="navButton" href="enCours.php">Emprunts en cours</a>
-    <a class="navButton" href="termine.php">Emprunts terminés</a>
+    <a class="navButton" href="enCours.php">Emprunts</a>
     <a class="navButton" href="../logout.php">Logout</a>
 </div>

@@ -6,7 +6,7 @@ if(isset($_GET['name'])){
     $result = $conn->query($query);
     $row = mysqli_fetch_array($result);
     $name = $row['Name'];
-    echo '<span class="hideInfo">&times;</span>';
+    //echo '<span class="hideInfo">&times;</span>';
     if(file_exists("../../Images/$name.png"))
         echo "<img class='game_img' src='../../Images/$name.png'/>";
     elseif(file_exists("../../Images/$name.jpg"))
@@ -16,7 +16,7 @@ if(isset($_GET['name'])){
     
     <div class="text"><?php echo $row['Name'];?></div>
     
-    <button type='button' onclick='unimplemented()'>Réserver</button>
+    
     
 <?php
 }

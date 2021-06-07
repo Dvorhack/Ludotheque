@@ -21,3 +21,7 @@ function constr(){
 function eveil(){
     document.location.href="eveil.php";
 }
+
+function emprunts(){
+    document.location.href="enCours.php";
+}

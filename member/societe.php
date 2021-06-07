@@ -73,8 +73,11 @@ include "../connect_sql.php"
         </div>
         <div id="infoBox" class='popup'>
             <div class="popup-content">
+                <span class="hideInfo">&times;</span>
+                <div class="game-content">
+                </div>
                 
-                
+                <button type='button' onclick='reserver()'>Réserver</button>
             </div>
         </div>
         <script src="js/header.js"></script>
