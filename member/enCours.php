@@ -31,6 +31,7 @@ include "../connect_sql.php"
         include "filtre.php";
         ?>
         <div class="main">
+            <div class="flex-row">
             <?php 
             $query = "SELECT Game.Name, Booking.GetDate, Booking.ReturnDate FROM Game, Booking WHERE Booking.ID_Game=Game.ID_Game AND Booking.ID_Member=".$_SESSION['id']; 
             //echo $query;
@@ -51,7 +52,7 @@ include "../connect_sql.php"
             //echo $query;
             $i=0;
             while($row = mysqli_fetch_array($result)){?>
-            <div class="elt" >
+            <div class="cards" >
                 <?php 
                 $name = $row['Name'];
                 if(file_exists("../Images/$name.png"))
@@ -63,10 +64,11 @@ include "../connect_sql.php"
                 
                 <h2><?php echo $row['Name'];?></h2>
                 
-                <p ><?php echo $row['GetDate']." - ".$row['ReturnDate'];?></p>
+                <p ><?php echo $row['GetDate']." -> ".$row['ReturnDate'];?></p>
                 
             </div>
             <?php $i++; } ?>
+        </div>
         </div>
         <script src="js/header.js"></script>
         <script src="js/filtre.js"></script>

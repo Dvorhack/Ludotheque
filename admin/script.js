@@ -18,3 +18,6 @@ function supprMember(id){
     document.location.href = "Utils/supprMember.php?idMem=" + id;
 }
 
+function cloturer(id, game){
+    document.location.href = "Utils/cloturer.php?id=" + id + "&game=" + game;
+}

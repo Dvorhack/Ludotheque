@@ -23,7 +23,7 @@ include "../connect_sql.php";
             <a href="index.php"><img src="../Images/return.png" /></a>
             <h1>Voici la liste des emprunts en cours :</h1></br>
             <?php
-            $query = "SELECT g.Name, m.FirstName, m.LastName, b.GetDate, b.ReturnDate FROM Booking b, Game g, Member m WHERE b.ID_Game=g.ID_Game AND m.ID_Member=b.ID_Member"; 
+            $query = "SELECT g.Name, m.FirstName, m.LastName, b.GetDate, b.ReturnDate, b.id, b.ID_Game FROM Booking b, Game g, Member m WHERE b.ID_Game=g.ID_Game AND m.ID_Member=b.ID_Member"; 
             $result = $conn->query($query);
             //var_dump($result);
             echo "<table>"; 
@@ -42,7 +42,7 @@ include "../connect_sql.php";
                 "</td><td>" . $row['LastName'] .
                 "</td><td>" . $row['Name'] .
                 "</td><td>" . $row['GetDate'] . 
-                "</td><td>"  . $row['ReturnDate'] . "</td><td><button type='button' onclick='unimplemented()'>Cloturer</button></td></tr>"; 
+                "</td><td>"  . $row['ReturnDate'] . "</td><td><button type='button' onclick='cloturer(".$row['id'].",".$row['ID_Game'].")'>Cloturer</button></td></tr>"; 
             }
 
             echo "</table>"; 

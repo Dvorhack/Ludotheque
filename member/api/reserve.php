@@ -13,13 +13,18 @@ if(isset($_GET['name'])){
         echo "-1";
         exit;
     }
+
+    // UPDATE `Stock` SET `Available` = '4' WHERE `Stock`.`ID_Game` = 12
     session_start();
     $id = $_SESSION['id'];
     $game = $row['ID_Game'];
     $date = date('Y-m-d H:i:s');
-    $req = "INSERT INTO `Booking` (`ID_Member`, `ID_Game`, `GetDate`, `ReturnDate`) VALUES ('$id', '$game', '$date', '$date')";
+    $returnDate = date('Y-m-d', strtotime("+1 month, $date"));
+    $nb = $nb-1;
+    $req = "UPDATE `Stock` SET `Available` = '$nb' WHERE `Stock`.`ID_Game` = $game ; ";
+    $req .= "INSERT INTO `Booking` (`ID_Member`, `ID_Game`, `GetDate`, `ReturnDate`) VALUES ('$id', '$game', '$date', '$returnDate');";
     //echo $req;
-    $res = $conn->query($req);
+    $res = $conn->multi_query($req);
     //$row = mysqli_fetch_array($res);
     echo "0";
     exit();

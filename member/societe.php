@@ -84,4 +84,5 @@ include "../connect_sql.php"
         <script src="js/filtre.js"></script>
         <script src="js/main.js"></script>
     </body>
+
 </html>
